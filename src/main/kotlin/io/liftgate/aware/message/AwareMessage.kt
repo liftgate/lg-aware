@@ -21,7 +21,7 @@ data class AwareMessage(
         @JvmStatic
         fun of(
             packet: String,
-            aware: io.liftgate.aware.Aware<AwareMessage>,
+            aware: Aware<AwareMessage>,
             vararg pair: Pair<String, Any?>
         ): AwareMessage
         {
@@ -40,7 +40,7 @@ data class AwareMessage(
     }
 
     @Transient
-    lateinit var aware: io.liftgate.aware.Aware<AwareMessage>
+    lateinit var aware: Aware<AwareMessage>
 
     val content = mutableMapOf<String, String>()
 
